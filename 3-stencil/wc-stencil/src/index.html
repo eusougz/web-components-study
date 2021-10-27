@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+    <style>
+      :root {
+        --color-primary: #a8cab5;
+        --color-err: red;
+      }
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+    <script type="module" src="/build/wc-stencil.esm.js"></script>
+    <script nomodule src="/build/wc-stencil.js"></script>
+  </head>
+  <body>
+    <gz-stock-price stock-symbol="AAPL"></gz-stock-price>
+
+    <gz-stock-finder></gz-stock-finder>
+    <script>
+      const sfEl = document.querySelector('gz-stock-finder')
+      sfEl.addEventListener('gzSymbolSelected', e => {
+        console.log(e)
+      })
+    </script>
+  </body>
+</html>
+
+<!-- <body>
+  <button id="sd-btn">Open side draw</button>
+  <gz-side-drawer title="Menu"></gz-side-drawer>
+  <p>
+    <gz-tooltip tooltip-text="This info is nice!">
+      Some info
+    </gz-tooltip>
+  </p>
+
+  <p>
+    <gz-tooltip tooltip-text="Large text to test when width is not enough to tooltip">
+      Other info
+    </gz-tooltip>
+  </p>
+
+  <button>Random action</button>
+
+  <script>
+    const sdButtonEl = document.querySelector('#sd-btn');
+    const sdEl = document.querySelector('gz-side-drawer');
+    sdButtonEl.addEventListener('click', () => {
+      if (!sdEl.opened) {
+        //sdEl.open = true;
+        sdEl.open();
+      }
+    })
+  </script>
+</body> -->

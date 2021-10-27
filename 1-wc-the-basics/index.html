@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components</title>
+    <script src="tooltip.js"></script>
+    <script src="confirm-link.js"></script>
+    <style>
+        :root {
+            --color-primary: green;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <gz-tooltip text="Web Components are awesome!" class="important">
+        <span>Web Components</span>
+    </gz-tooltip>
+    <p>
+        <gz-tooltip>Other example</gz-tooltip>
+    </p>
+
+    <a is="gz-confirm-link" href="https://google.com">Google</a>
+</body>
+</html>
